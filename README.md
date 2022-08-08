@@ -1,13 +1,17 @@
-compile:
+**compile:**
 
 npx hardhat compile 
 
-deploy:
+
+**deploy:**
 
 npx hardhat run scripts/deploy.js --network rinkeby
 
-run frontend:
+
+**run frontend:**
 
 npm run dev
 
-go to localhost:3000
+
+# not using ipfs to store images in this project
+
