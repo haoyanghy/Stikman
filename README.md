@@ -1,17 +1,11 @@
-**compile:**
-
+# compile contract:
 npx hardhat compile 
 
-
-**deploy:**
-
+# deploy contract:
 npx hardhat run scripts/deploy.js --network rinkeby
 
-
-**run frontend:**
-
+# run frontend:
 npm run dev
-
 
 # not using ipfs to store images in this project
 
