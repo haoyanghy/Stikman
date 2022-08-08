@@ -1,4 +1,3 @@
-// ../../backend/artifacts/contracts/Stikman.sol/Stikman.json
 export const abi = [
   {
     inputs: [

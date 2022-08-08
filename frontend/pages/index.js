@@ -3,27 +3,18 @@ import Head from "next/head";
 import React, { useEffect, useRef, useState } from "react";
 import Web3Modal from "web3modal";
 import { abi, NFT_CONTRACT_ADDRESS } from "../constants";
+import Footer from "../components/Footer";
 import styles from "../styles/Home.module.css";
 
 export default function Home() {
-  // walletConnected keep track of whether the user's wallet is connected or not
   const [walletConnected, setWalletConnected] = useState(false);
-  // presaleStarted keeps track of whether the presale has started or not
   const [presaleStarted, setPresaleStarted] = useState(false);
-  // presaleEnded keeps track of whether the presale ended
   const [presaleEnded, setPresaleEnded] = useState(false);
-  // loading is set to true when we are waiting for a transaction to get mined
   const [loading, setLoading] = useState(false);
-  // checks if the currently connected MetaMask wallet is the owner of the contract
   const [isOwner, setIsOwner] = useState(false);
-  // tokenIdsMinted keeps track of the number of tokenIds that have been minted
   const [tokenIdsMinted, setTokenIdsMinted] = useState("0");
-  // Create a reference to the Web3 Modal (used for connecting to Metamask) which persists as long as the page is open
   const web3ModalRef = useRef();
 
-  /**
-   * presaleMint: Mint an NFT during the presale
-   */
   const presaleMint = async () => {
     try {
       // We need a Signer here since this is a 'write' transaction.
@@ -47,9 +38,7 @@ export default function Home() {
     }
   };
 
-  /**
-   * publicMint: Mint an NFT after the presale
-   */
+  // Mint after presale
   const publicMint = async () => {
     try {
       // We need a Signer here since this is a 'write' transaction.
@@ -73,9 +62,6 @@ export default function Home() {
     }
   };
 
-  /*
-      connectWallet: Connects the MetaMask wallet
-    */
   const connectWallet = async () => {
     try {
       // Get the provider from web3Modal, which in our case is MetaMask
@@ -87,9 +73,6 @@ export default function Home() {
     }
   };
 
-  /**
-   * startPresale: starts the presale for the NFT Collection
-   */
   const startPresale = async () => {
     try {
       // We need a Signer here since this is a 'write' transaction.
@@ -110,10 +93,6 @@ export default function Home() {
     }
   };
 
-  /**
-   * checkIfPresaleStarted: checks if the presale has started by quering the `presaleStarted`
-   * variable in the contract
-   */
   const checkIfPresaleStarted = async () => {
     try {
       // Get the provider from web3Modal, which in our case is MetaMask
@@ -135,10 +114,6 @@ export default function Home() {
     }
   };
 
-  /**
-   * checkIfPresaleEnded: checks if the presale has ended by quering the `presaleEnded`
-   * variable in the contract
-   */
   const checkIfPresaleEnded = async () => {
     try {
       // Get the provider from web3Modal, which in our case is MetaMask
@@ -166,9 +141,6 @@ export default function Home() {
     }
   };
 
-  /**
-   * getOwner: calls the contract to retrieve the owner
-   */
   const getOwner = async () => {
     try {
       // Get the provider from web3Modal, which in our case is MetaMask
@@ -191,9 +163,6 @@ export default function Home() {
     }
   };
 
-  /**
-   * getTokenIdsMinted: gets the number of tokenIds that have been minted
-   */
   const getTokenIdsMinted = async () => {
     try {
       // Get the provider from web3Modal, which in our case is MetaMask
@@ -243,9 +212,6 @@ export default function Home() {
     return web3Provider;
   };
 
-  // useEffects are used to react to changes in state of the website
-  // The array at the end of function call represents what state changes will trigger this effect
-  // In this case, whenever the value of `walletConnected` changes - this effect will be called
   useEffect(() => {
     // if wallet is not connected, create a new instance of Web3Modal and connect the MetaMask wallet
     if (!walletConnected) {
@@ -348,28 +314,29 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>Crypto Devs</title>
-        <meta name="description" content="Whitelist-Dapp" />
-        <link rel="icon" href="/favicon.ico" />
+        <title>Stikman</title>
+        <meta name="description" content="Stikman" />
+        <link rel="icon" href="./stikman/1.png" />
       </Head>
+
       <div className={styles.main}>
         <div>
-          <h1 className={styles.title}>Welcome to Crypto Devs!</h1>
+          <h1 className={styles.title}>Welcome to Stikman!</h1>
+
           <div className={styles.description}>
             Its an NFT collection for developers in Crypto.
           </div>
+
           <div className={styles.description}>
             {tokenIdsMinted}/20 have been minted
           </div>
+
           {renderButton()}
         </div>
         <div>
-          <img className={styles.image} src="./cryptodevs/0.svg" />
+          <img className={styles.image} src="./stikman/1.png" />
         </div>
       </div>
-      <footer className={styles.footer}>
-        Made with &#10084; by Crypto Devs
-      </footer>
     </div>
   );
 }
@@ -378,4 +345,4 @@ export default function Home() {
 // About (Mint button, description and nfts preview)
 // Roadmap
 // Team (Use cards probably)
-// Footer
+// Footer //
