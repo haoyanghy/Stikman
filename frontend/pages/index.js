@@ -3,7 +3,11 @@ import Head from "next/head";
 import React, { useEffect, useRef, useState } from "react";
 import Web3Modal from "web3modal";
 import { abi, NFT_CONTRACT_ADDRESS } from "../constants";
-import Footer from "../components/Footer";
+
+import About from "../components/About";
+import Roadmap from "../components/Roadmap";
+import Team from "../components/Team";
+import GridImage from "../components/GridImage";
 import styles from "../styles/Home.module.css";
 
 export default function Home() {
@@ -322,27 +326,30 @@ export default function Home() {
       <div className={styles.main}>
         <div>
           <h1 className={styles.title}>Welcome to Stikman!</h1>
-
           <div className={styles.description}>
             Its an NFT collection for developers in Crypto.
+            <br />
+            <br />
+            {tokenIdsMinted}/20 have been minted.
           </div>
-
-          <div className={styles.description}>
-            {tokenIdsMinted}/20 have been minted
-          </div>
-
           {renderButton()}
         </div>
-        <div>
-          <img className={styles.image} src="./stikman/1.png" />
-        </div>
+        {/* <GridImage /> */}
       </div>
+
+      <About />
+      <br />
+      <Roadmap />
+      <br />
+      <br />
+      <Team />
+      <br />
     </div>
   );
 }
 
-// Navbar (Links and social media icons)
+// Navbar (Links and social media icons) //
 // About (Mint button, description and nfts preview)
 // Roadmap
-// Team (Use cards probably)
+// Team (Use cards probably) //
 // Footer //

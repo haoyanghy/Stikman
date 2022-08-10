@@ -10,9 +10,9 @@ function Navibar() {
         <Navbar.Brand href="/">Stikman</Navbar.Brand>
 
         <Nav className="me-auto">
-          <Nav.Link href="about">About</Nav.Link>
-          <Nav.Link href="/">Roadmap</Nav.Link>
-          <Nav.Link href="/">Team</Nav.Link>
+          <Nav.Link href="#about">About</Nav.Link>
+          <Nav.Link href="#roadmap">Roadmap</Nav.Link>
+          <Nav.Link href="#team">Team</Nav.Link>
         </Nav>
 
         {/* Should be link to discord SERVER */}

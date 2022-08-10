@@ -1,10 +1,10 @@
 .main {
-  min-height: 90vh;
+  min-height: 80vh;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  font-family: "Courier New", Courier, monospace;
+  font-family: cursive;
 }
 
 .image {
@@ -15,13 +15,15 @@
 
 .title {
   font-size: 2rem;
-  margin: 2rem 0;
+  margin: 1rem 0;
+  font-family: cursive;
 }
 
 .description {
   line-height: 1;
-  margin: 2rem 0;
+  margin: 1rem 0;
   font-size: 1.2rem;
+  font-family: cursive;
 }
 
 .button {
@@ -29,7 +31,7 @@
   background-color: blue;
   border: none;
   color: #ffffff;
-  font-size: 15px;
+  font-size: 20px;
   padding: 20px;
   width: 200px;
   cursor: pointer;
@@ -46,4 +48,35 @@
   left: 0;
   width: 100%;
   font-size: larger;
+}
+
+.teamLink {
+  color: blue;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+.teamTitle {
+  text-align: center;
+  font-family: cursive;
+}
+
+.card {
+  margin: 1rem 6rem;
+}
+
+/* .container {
+  display: flex;
+  flex-wrap: wrap;
+  border-spacing: 0;
+}
+
+.gridImage {
+  width: 50%;
+  height: 50%;
+} */
+
+.aboutCard {
+  margin: 1rem 6rem;
+  text-align: center;
 }
