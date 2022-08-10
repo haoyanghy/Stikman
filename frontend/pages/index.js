@@ -7,8 +7,10 @@ import { abi, NFT_CONTRACT_ADDRESS } from "../constants";
 import About from "../components/About";
 import Roadmap from "../components/Roadmap";
 import Team from "../components/Team";
-import GridImage from "../components/GridImage";
+import Slideshow from "../components/Slideshow";
 import styles from "../styles/Home.module.css";
+
+import { motion, useScroll } from "framer-motion";
 
 export default function Home() {
   const [walletConnected, setWalletConnected] = useState(false);
@@ -18,6 +20,7 @@ export default function Home() {
   const [isOwner, setIsOwner] = useState(false);
   const [tokenIdsMinted, setTokenIdsMinted] = useState("0");
   const web3ModalRef = useRef();
+  const { scrollYProgress } = useScroll();
 
   const presaleMint = async () => {
     try {
@@ -317,6 +320,10 @@ export default function Home() {
 
   return (
     <div>
+      <motion.div
+        className={styles.progressBar}
+        style={{ scaleX: scrollYProgress }}
+      />
       <Head>
         <title>Stikman</title>
         <meta name="description" content="Stikman" />
@@ -334,14 +341,14 @@ export default function Home() {
           </div>
           {renderButton()}
         </div>
-        {/* <GridImage /> */}
+        <Slideshow />
       </div>
 
       <About />
       <br />
       <Roadmap />
       <br />
-      <br />
+
       <Team />
       <br />
     </div>

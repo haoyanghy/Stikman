@@ -5,12 +5,9 @@ import styles from "../styles/Home.module.css";
 function About() {
   return (
     <div id="about">
-      <Card
-        style={{ width: "100%", height: "25rem" }}
-        className="text-center bg-dark text-white"
-      >
-        <Card.Title className={styles.title}>About</Card.Title>
-        <Card.Body className={styles.description}>
+      <Card className={styles.aboutCard}>
+        <Card.Title className={styles.altTitle}>About</Card.Title>
+        <Card.Body className={styles.aboutDescription}>
           Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
           commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus
           et magnis dis parturient montes, nascetur ridiculus mus. Donec quam

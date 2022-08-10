@@ -4,13 +4,15 @@ import styles from "../styles/Home.module.css";
 function Roadmap() {
   return (
     <>
-      <div className={styles.teamTitle} id="team">
+      <div className={styles.altTitle} id="roadmap">
         <h1> Roadmap </h1>
       </div>
       <Accordion className={styles.card} defaultActiveKey="0">
         <Accordion.Item eventKey="0">
-          <Accordion.Header>Phase 1</Accordion.Header>
-          <Accordion.Body>
+          <Accordion.Header className={styles.roadmapHeader}>
+            Phase 1
+          </Accordion.Header>
+          <Accordion.Body className={styles.roadmapDescription}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -21,8 +23,11 @@ function Roadmap() {
           </Accordion.Body>
         </Accordion.Item>
         <Accordion.Item eventKey="1">
-          <Accordion.Header>Phase 2</Accordion.Header>
-          <Accordion.Body>
+          <Accordion.Header className={styles.roadmapHeader}>
+            Phase 2
+          </Accordion.Header>
+          <Accordion.Body className={styles.roadmapDescription}>
+            {" "}
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -33,8 +38,10 @@ function Roadmap() {
           </Accordion.Body>
         </Accordion.Item>{" "}
         <Accordion.Item eventKey="2">
-          <Accordion.Header>Phase 3</Accordion.Header>
-          <Accordion.Body>
+          <Accordion.Header className={styles.roadmapHeader}>
+            Phase 3
+          </Accordion.Header>
+          <Accordion.Body className={styles.roadmapDescription}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -45,8 +52,10 @@ function Roadmap() {
           </Accordion.Body>
         </Accordion.Item>{" "}
         <Accordion.Item eventKey="3">
-          <Accordion.Header>Phase 4</Accordion.Header>
-          <Accordion.Body>
+          <Accordion.Header className={styles.roadmapHeader}>
+            Phase 4
+          </Accordion.Header>
+          <Accordion.Body className={styles.roadmapDescription}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut

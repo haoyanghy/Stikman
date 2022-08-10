@@ -6,14 +6,18 @@ import styles from "../styles/Home.module.css";
 function Team() {
   return (
     <>
-      <div className={styles.teamTitle} id="team">
+      <div className={styles.altTitle} id="team">
         <h1> Our Team </h1>
       </div>
       <CardGroup className={styles.card}>
         <Card>
-          <Card.Img height="500" variant="top" src="./avatar.png" />
+          <Card.Img
+            className={styles.teamImg}
+            variant="top"
+            src="./avatar.png"
+          />
           <Card.Body>
-            <Card.Title>John</Card.Title>
+            <Card.Title className={styles.roadmapHeader}>John</Card.Title>
             <Card.Text>
               Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
               commodo ligula eget dolor. Aenean massa. Cum sociis natoque
@@ -27,9 +31,13 @@ function Team() {
           </Card.Footer>
         </Card>
         <Card>
-          <Card.Img height="500" variant="top" src="./avatar.png" />
+          <Card.Img
+            className={styles.teamImg}
+            variant="top"
+            src="./avatar.png"
+          />
           <Card.Body>
-            <Card.Title>Alex</Card.Title>
+            <Card.Title className={styles.roadmapHeader}>Alex</Card.Title>
             <Card.Text>
               Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
               commodo ligula eget dolor. Aenean massa. Cum sociis natoque
@@ -43,9 +51,13 @@ function Team() {
           </Card.Footer>
         </Card>
         <Card>
-          <Card.Img height="500" variant="top" src="./avatar.png" />
+          <Card.Img
+            className={styles.teamImg}
+            variant="top"
+            src="./avatar.png"
+          />
           <Card.Body>
-            <Card.Title>Mary</Card.Title>
+            <Card.Title className={styles.roadmapHeader}>Mary</Card.Title>
             <Card.Text>
               Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
               commodo ligula eget dolor. Aenean massa. Cum sociis natoque
