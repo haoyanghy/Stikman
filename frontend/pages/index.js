@@ -8,9 +8,10 @@ import About from "../components/About";
 import Roadmap from "../components/Roadmap";
 import Team from "../components/Team";
 import Slideshow from "../components/Slideshow";
+import ProgressBar from "../components/ProgressBar";
 import styles from "../styles/Home.module.css";
 
-import { motion, useScroll } from "framer-motion";
+import { motion } from "framer-motion";
 
 export default function Home() {
   const [walletConnected, setWalletConnected] = useState(false);
@@ -20,7 +21,6 @@ export default function Home() {
   const [isOwner, setIsOwner] = useState(false);
   const [tokenIdsMinted, setTokenIdsMinted] = useState("0");
   const web3ModalRef = useRef();
-  const { scrollYProgress } = useScroll();
 
   const presaleMint = async () => {
     try {
@@ -264,23 +264,35 @@ export default function Home() {
     // If wallet is not connected, return a button which allows them to connect their wllet
     if (!walletConnected) {
       return (
-        <button onClick={connectWallet} className={styles.button}>
+        <motion.button
+          onClick={connectWallet}
+          className={styles.button}
+          whileHover={{ scale: 1.05 }}
+        >
           Connect your wallet
-        </button>
+        </motion.button>
       );
     }
 
     // If we are currently waiting for something, return a loading button
     if (loading) {
-      return <button className={styles.button}>Loading...</button>;
+      return (
+        <motion.button className={styles.button} whileHover={{ scale: 1.05 }}>
+          Loading...
+        </motion.button>
+      );
     }
 
     // If connected user is the owner, and presale hasnt started yet, allow them to start the presale
     if (isOwner && !presaleStarted) {
       return (
-        <button className={styles.button} onClick={startPresale}>
+        <motion.button
+          className={styles.button}
+          onClick={startPresale}
+          whileHover={{ scale: 1.05 }}
+        >
           Start Presale!
-        </button>
+        </motion.button>
       );
     }
 
@@ -301,9 +313,13 @@ export default function Home() {
             Presale has started!!! If your address is whitelisted, Mint a Crypto
             Dev 🥳
           </div>
-          <button className={styles.button} onClick={presaleMint}>
+          <motion.button
+            className={styles.button}
+            onClick={presaleMint}
+            whileHover={{ scale: 1.05 }}
+          >
             Presale Mint 🚀
-          </button>
+          </motion.button>
         </div>
       );
     }
@@ -311,26 +327,26 @@ export default function Home() {
     // If presale started and has ended, its time for public minting
     if (presaleStarted && presaleEnded) {
       return (
-        <button className={styles.button} onClick={publicMint}>
+        <motion.button
+          className={styles.button}
+          onClick={publicMint}
+          whileHover={{ scale: 1.05 }}
+        >
           Public Mint 🚀
-        </button>
+        </motion.button>
       );
     }
   };
 
   return (
-    <div>
-      <motion.div
-        className={styles.progressBar}
-        style={{ scaleX: scrollYProgress }}
-      />
+    <>
       <Head>
         <title>Stikman</title>
         <meta name="description" content="Stikman" />
         <link rel="icon" href="./stikman/1.png" />
       </Head>
-
       <div className={styles.main}>
+        <ProgressBar />
         <div>
           <h1 className={styles.title}>Welcome to Stikman!</h1>
           <div className={styles.description}>
@@ -341,22 +357,15 @@ export default function Home() {
           </div>
           {renderButton()}
         </div>
+
         <Slideshow />
       </div>
-
       <About />
       <br />
       <Roadmap />
       <br />
-
       <Team />
       <br />
-    </div>
+    </>
   );
 }
-
-// Navbar (Links and social media icons) //
-// About (Mint button, description and nfts preview)
-// Roadmap
-// Team (Use cards probably) //
-// Footer //

@@ -103,12 +103,34 @@
   margin: 0rem 2rem 5.5rem 4rem;
 }
 
-.progressBar {
+#progressBarContainer {
   position: fixed;
+  z-index: 10;
+  background: rgba(36, 36, 44, 0.1);
+  width: 100%;
   top: 0;
   left: 0;
-  right: 0;
-  height: 10px;
-  background: var(--red);
-  transform-origin: 0%;
+}
+
+#progressBar {
+  background: black;
+  /* background: linear-gradient(to right, #1c1c1c, black); */
+  /* background: linear-gradient(
+    to right,
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    indigo,
+    violet
+  ); */
+  transform-origin: top left;
+  transform: scale(0, 0);
+  opacity: 0;
+}
+
+#progressBarContainer,
+#progressBar {
+  height: 12px;
 }

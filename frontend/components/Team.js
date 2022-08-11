@@ -25,7 +25,11 @@ function Team() {
             </Card.Text>
           </Card.Body>
           <Card.Footer>
-            <Nav.Link className={styles.teamLink} href="/">
+            <Nav.Link
+              className={styles.teamLink}
+              target="_blank"
+              href="https://www.wikipedia.org/"
+            >
               See more...
             </Nav.Link>{" "}
           </Card.Footer>
@@ -45,7 +49,11 @@ function Team() {
             </Card.Text>
           </Card.Body>
           <Card.Footer>
-            <Nav.Link className={styles.teamLink} href="/">
+            <Nav.Link
+              className={styles.teamLink}
+              target="_blank"
+              href="https://www.wikipedia.org/"
+            >
               See more...
             </Nav.Link>{" "}
           </Card.Footer>
@@ -65,7 +73,11 @@ function Team() {
             </Card.Text>
           </Card.Body>
           <Card.Footer>
-            <Nav.Link className={styles.teamLink} href="/">
+            <Nav.Link
+              className={styles.teamLink}
+              target="_blank"
+              href="https://www.wikipedia.org/"
+            >
               See more...
             </Nav.Link>
           </Card.Footer>
