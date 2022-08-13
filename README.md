@@ -3,7 +3,7 @@
 - Not using IPFS to store images in this project, images are stored in /frontend/public/stikman
 - Users are expected to have Metamask installed before minting
 - Website is not compatible for mobile screen size yet
-- Website: https://stikman-test-ily8e3l9z-haoyanghy.vercel.app/
+- Website: https://stikman-qokigsj74-haoyanghy.vercel.app/
 
 ## Whitelist contract
 
