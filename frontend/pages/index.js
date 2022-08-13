@@ -271,7 +271,10 @@ export default function Home() {
     if (!presaleStarted) {
       return (
         <div>
+          {/* Error: `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`. react/no-unescaped-entities */}
           <div className={styles.description}>{"Presale hasn't started!"}</div>
+          {/* OR */}
+          {/* <div className={styles.description}>Presale hasn&apos;t started!</div> */}
         </div>
       );
     }
