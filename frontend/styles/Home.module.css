@@ -4,7 +4,7 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  font-family: cursive;
+  font-family: cursive, Candara;
   /* background-color: #24242c; */
 }
 
@@ -17,35 +17,35 @@
 .title {
   font-size: 2rem;
   margin: 1rem 0;
-  font-family: cursive;
+  font-family: cursive, Candara;
 }
 
 .altTitle {
   font-size: 2.5rem;
   margin: 1rem 0;
   text-align: center;
-  font-family: cursive;
+  font-family: cursive, Candara;
 }
 
 .description {
   line-height: 1;
   margin: 1rem 0;
   font-size: 1.2rem;
-  font-family: cursive;
+  font-family: cursive, Candara;
 }
 
 .aboutDescription {
   line-height: 1.5;
   margin: 1rem 3rem;
   font-size: 1.2rem;
-  font-family: cursive;
+  font-family: cursive, Candara;
 }
 
 .roadmapDescription {
   line-height: 1.5;
   margin: 0.5rem;
   font-size: 1.1rem;
-  font-family: cursive;
+  font-family: cursive, Candara;
 }
 
 .button {
@@ -95,7 +95,7 @@
 }
 
 .roadmapHeader {
-  font-family: "Franklin Gothic Medium";
+  font-family: "Franklin Gothic Medium", Candara;
 }
 
 .slideshow {

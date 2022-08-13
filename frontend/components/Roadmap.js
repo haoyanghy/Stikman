@@ -27,7 +27,6 @@ function Roadmap() {
             Phase 2
           </Accordion.Header>
           <Accordion.Body className={styles.roadmapDescription}>
-            {" "}
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -36,7 +35,7 @@ function Roadmap() {
             pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
             culpa qui officia deserunt mollit anim id est laborum.
           </Accordion.Body>
-        </Accordion.Item>{" "}
+        </Accordion.Item>
         <Accordion.Item eventKey="2">
           <Accordion.Header className={styles.roadmapHeader}>
             Phase 3
@@ -50,7 +49,7 @@ function Roadmap() {
             pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
             culpa qui officia deserunt mollit anim id est laborum.
           </Accordion.Body>
-        </Accordion.Item>{" "}
+        </Accordion.Item>
         <Accordion.Item eventKey="3">
           <Accordion.Header className={styles.roadmapHeader}>
             Phase 4

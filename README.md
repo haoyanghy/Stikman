@@ -1,6 +1,8 @@
 ## Notes:
 
-- Not using IPFs to store images in this project, images are stored in the public folder in the frontend folder
+- Not using IPFS to store images in this project, images are stored in /frontend/public/stikman
+- Users are expected to have Metamask installed before minting
+- Website is not compatible for mobile screen size yet
 - Website: https://stikman-test-ily8e3l9z-haoyanghy.vercel.app/
 
 ## Whitelist contract
@@ -10,5 +12,5 @@
 
 ## Stikman contract
 
-- Address:
-- Etherscan:
+- Address: 0xf0a21a11eD45b66225fDAFc626aEbbCafF6188F5
+- Etherscan: https://rinkeby.etherscan.io/address/0xf0a21a11eD45b66225fDAFc626aEbbCafF6188F5
