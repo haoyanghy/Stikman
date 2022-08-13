@@ -1,27 +1,16 @@
-# compile contract:
+# Notes:
 
-npx hardhat compile
+- Not using IPFs to store images in this project, images are stored in the public folder in the frontend folder
+- Website: https://stikman-test-ily8e3l9z-haoyanghy.vercel.app/
 
-# deploy contract:
+## Whitelist contract
 
-npx hardhat run scripts/deploy.js --network rinkeby
+\*address: 0x0392EeBe289002A73421f0911eB05b3f10AaCe9E
 
-# run frontend:
+\*etherscan: https://rinkeby.etherscan.io/address/0x0392EeBe289002A73421f0911eB05b3f10AaCe9E
 
-npm run dev
+## Stikman contract
 
-# not using ipfs to store images in this project
+\*address:
 
-images are stored in the public folder of the frontend folder
-
-# whitelist contract
-
-address: 0x0392EeBe289002A73421f0911eB05b3f10AaCe9E
-
-etherscan: https://rinkeby.etherscan.io/address/0x0392EeBe289002A73421f0911eB05b3f10AaCe9E
-
-# stikman contract
-
-address:
-
-etherscan:
+\*etherscan:

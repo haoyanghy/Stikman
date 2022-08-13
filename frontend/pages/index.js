@@ -284,8 +284,8 @@ export default function Home() {
       return (
         <div>
           <div className={styles.description}>
-            Presale has started!!! If your address is whitelisted, Mint a Crypto
-            Dev 🥳
+            Presale has started!!! If your address is whitelisted, Mint a
+            Stikman 🥳
           </div>
           <motion.button
             className={styles.button}
@@ -324,7 +324,7 @@ export default function Home() {
         <div>
           <h1 className={styles.title}>Welcome to Stikman!</h1>
           <div className={styles.description}>
-            It's an NFT collection for developers in Crypto.
+            {"It's an NFT collection for developers in Crypto."}
             <br />
             <br />
             {tokenIdsMinted}/20 have been minted.
