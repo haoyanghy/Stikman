@@ -3,7 +3,7 @@
 - Not using IPFS to store images in this project, images are stored in /frontend/public/stikman
 - Users are expected to have Metamask installed before minting
 - Website is not compatible for mobile screen size yet
-- Website: https://stikman-qokigsj74-haoyanghy.vercel.app/
+- Website: https://stikman.vercel.app/
 
 ## Whitelist contract
 
@@ -12,5 +12,5 @@
 
 ## Stikman contract
 
-- Address: 0xf0a21a11eD45b66225fDAFc626aEbbCafF6188F5
-- Etherscan: https://rinkeby.etherscan.io/address/0xf0a21a11eD45b66225fDAFc626aEbbCafF6188F5
+- Address: 0x112Df3466E8d910e41c45934e8568Ee227A1C582
+- Etherscan: https://rinkeby.etherscan.io/address/0x112Df3466E8d910e41c45934e8568Ee227A1C582
