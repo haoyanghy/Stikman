@@ -12,8 +12,6 @@ import styles from "../styles/Home.module.css";
 
 import { motion } from "framer-motion";
 
-import Maintest from "../components/Maintest";
-
 export default function Home() {
   const [walletConnected, setWalletConnected] = useState(false);
   const [presaleStarted, setPresaleStarted] = useState(false);
@@ -320,7 +318,7 @@ export default function Home() {
         <meta name="description" content="Stikman" />
         <link rel="icon" href="./stikman/1.png" />
       </Head>
-      <Maintest tokenIdsMinted={tokenIdsMinted} buttonHandler={renderButton} />
+      <Main tokenIdsMinted={tokenIdsMinted} buttonHandler={renderButton} />
       <hr />
       <About />
       <Roadmap />
