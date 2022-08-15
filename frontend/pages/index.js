@@ -4,14 +4,15 @@ import React, { useEffect, useRef, useState } from "react";
 import Web3Modal from "web3modal";
 import { abi, NFT_CONTRACT_ADDRESS } from "../constants";
 
+import Main from "../components/Main";
 import About from "../components/About";
 import Roadmap from "../components/Roadmap";
 import Team from "../components/Team";
-import Slideshow from "../components/Slideshow";
-import ProgressBar from "../components/ProgressBar";
 import styles from "../styles/Home.module.css";
 
 import { motion } from "framer-motion";
+
+import Maintest from "../components/Maintest";
 
 export default function Home() {
   const [walletConnected, setWalletConnected] = useState(false);
@@ -319,26 +320,11 @@ export default function Home() {
         <meta name="description" content="Stikman" />
         <link rel="icon" href="./stikman/1.png" />
       </Head>
-      <div className={styles.main}>
-        <ProgressBar />
-        <div>
-          <h1 className={styles.title}>Welcome to Stikman!</h1>
-          <div className={styles.description}>
-            {"It's an NFT collection of interesting Stikman figures."}
-            <br />
-            <br />
-            {tokenIdsMinted}/20 have been minted.
-          </div>
-          {renderButton()}
-        </div>
-        <Slideshow />
-      </div>
+      <Maintest tokenIdsMinted={tokenIdsMinted} buttonHandler={renderButton} />
+      <hr />
       <About />
-      <br />
       <Roadmap />
-      <br />
       <Team />
-      <br />
     </>
   );
 }

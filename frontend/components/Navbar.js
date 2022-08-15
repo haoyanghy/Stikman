@@ -1,6 +1,7 @@
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
+import styles from "../styles/Home.module.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { motion } from "framer-motion";
 // import React, { useState } from "react";
@@ -22,7 +23,7 @@ function Navibar() {
           <Navbar.Brand href="/">Stikman</Navbar.Brand>
         </motion.div>
 
-        <Nav className="me-auto">
+        <Nav className={styles.nav}>
           {/* {navLinksMap} */}
           <motion.div whileHover={{ scale: 1.2 }}>
             <Nav.Link href="#about">About</Nav.Link>
@@ -47,7 +48,7 @@ function Navibar() {
               src="/discord.svg"
               width="30"
               height="30"
-              className="d-inline-block align-top"
+              className={styles.navIcon}
               alt="Discord logo"
             />{" "}
           </motion.div>
@@ -65,7 +66,7 @@ function Navibar() {
               src="/twitter.svg"
               width="30"
               height="30"
-              className="d-inline-block align-top"
+              className={styles.navIcon}
               alt="Twitter logo"
             />
           </motion.div>
@@ -83,7 +84,7 @@ function Navibar() {
               src="/instagram.svg"
               width="30"
               height="30"
-              className="d-inline-block align-top"
+              className={styles.navIcon}
               alt="Instagram logo"
             />
           </motion.div>

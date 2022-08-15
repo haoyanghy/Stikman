@@ -1,13 +1,13 @@
 import React from "react";
-import Card from "react-bootstrap/Card";
 import styles from "../styles/Home.module.css";
 
-function About() {
+const About = () => {
   return (
-    <div id="about">
-      <Card className={styles.aboutCard}>
-        <Card.Title className={styles.altTitle}>About</Card.Title>
-        <Card.Body className={styles.aboutDescription}>
+    <div className={styles.aboutCard}>
+      <header className={styles.aboutTitle}>About</header>
+
+      <div className={styles.aboutDescription}>
+        <p>
           Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
           commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus
           et magnis dis parturient montes, nascetur ridiculus mus. Donec quam
@@ -29,10 +29,10 @@ function About() {
           tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales
           sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit
           cursus nunc,
-        </Card.Body>
-      </Card>
+        </p>
+      </div>
     </div>
   );
-}
+};
 
 export default About;

@@ -4,10 +4,10 @@ import styles from "../styles/Home.module.css";
 function Roadmap() {
   return (
     <>
-      <div className={styles.altTitle} id="roadmap">
-        <h1> Roadmap </h1>
+      <div className={styles.roadmapTitle} id="roadmap">
+        Roadmap
       </div>
-      <Accordion className={styles.card} defaultActiveKey="0">
+      <Accordion className={styles.roadmapCard} defaultActiveKey="0">
         <Accordion.Item eventKey="0">
           <Accordion.Header className={styles.roadmapHeader}>
             Phase 1

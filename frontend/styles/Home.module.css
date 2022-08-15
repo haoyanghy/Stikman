@@ -1,53 +1,54 @@
-.main {
-  /* min-height: 80vh; */
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  font-family: cursive, Candara;
-  /* background-color: #24242c; */
+#progressBarContainer {
+  position: fixed;
+  z-index: 10;
+  background: rgba(36, 36, 44, 0.1);
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+#progressBar {
+  background: black;
+  /* background: linear-gradient(to right, #1c1c1c, black); */
+  /* background: linear-gradient(
+    to right,
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    indigo,
+    violet
+    ); */
+  transform-origin: top left;
+  transform: scale(0, 0);
+  opacity: 0;
+}
+#progressBarContainer,
+#progressBar {
+  height: 12px;
 }
 
-/* .image {
-  width: 70%;
-  height: 50%;
-  margin-left: 20%;
-} */
-
-.title {
-  font-size: 2rem;
-  margin: 1rem 0;
-  font-family: cursive, Candara;
+.nav {
+  margin-right: auto;
+}
+.navIcon {
+  display: inline-block;
+  vertical-align: top;
 }
 
-.altTitle {
-  font-size: 2.5rem;
-  margin: 1rem 0;
-  text-align: center;
-  font-family: cursive, Candara;
+.mainCard {
+  margin: 0.5rem 6rem 4.5rem 6rem;
 }
-
-.description {
-  line-height: 1;
-  margin: 1rem 0;
-  font-size: 1.2rem;
-  font-family: cursive, Candara;
+.leftCard {
+  margin: 10rem 0rem 0rem 5rem;
 }
-
-.aboutDescription {
-  line-height: 1.5;
-  margin: 1rem 3rem;
-  font-size: 1.2rem;
-  font-family: cursive, Candara;
+.mainTitle {
+  font-family: Verdana, Arial, Tahoma, Serif;
 }
-
-.roadmapDescription {
-  line-height: 1.5;
-  margin: 0.5rem;
-  font-size: 1.1rem;
-  font-family: cursive, Candara;
+.mainDescription {
+  font-size: 1.5rem;
+  font-family: Serif, Verdana, Arial, Tahoma;
 }
-
 .button {
   border-radius: 4px;
   background-color: blue;
@@ -58,6 +59,55 @@
   width: 250px;
   cursor: pointer;
   margin-bottom: 2%;
+}
+.slideshow {
+  width: 28rem;
+}
+
+.aboutTitle,
+.roadmapTitle,
+.teamTitle {
+  font-size: 2rem;
+  text-align: center;
+  font-family: Verdana, Arial, Tahoma, Serif;
+}
+.aboutCard {
+  margin: 0.5rem 6rem 3rem 6rem;
+  padding: 1rem 3rem;
+  color: white;
+  background-color: #24242c;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  border-radius: 5px;
+}
+.aboutDescription {
+  text-align: left;
+  font-size: 1.2rem;
+  font-family: Serif, Verdana, Arial, Tahoma;
+}
+
+.roadmapCard,
+.teamCard {
+  margin: 0.5rem 6rem 3rem 6rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  border-radius: 5px;
+}
+.roadmapHeader {
+  font-family: Franklin Gothic Medium, Verdana;
+}
+.roadmapDescription {
+  font-size: 1.1rem;
+  font-family: Serif, Verdana, Arial, Tahoma;
+}
+
+.teamImg {
+  padding: 3rem;
+}
+.teamLink {
+  color: blue;
+  background-color: transparent;
+  text-decoration: underline;
 }
 
 .footer {
@@ -72,65 +122,22 @@
   font-size: larger;
 }
 
-.teamLink {
-  color: blue;
-  background-color: transparent;
-  text-decoration: underline;
-}
-
-.card {
-  margin: 1rem 6rem;
-}
-
-.aboutCard {
-  margin: 1rem 6rem;
-  text-align: center;
-  color: white;
-  background-color: #24242c;
-}
-
-.teamImg {
-  /* margin: 3rem 3rem; */
-  padding: 3rem;
-}
-
-.roadmapHeader {
-  font-family: "Franklin Gothic Medium", Candara;
-}
-
-.slideshow {
-  width: 30rem;
-  margin: 0rem 2rem 5.5rem 4rem;
-}
-
-#progressBarContainer {
-  position: fixed;
-  z-index: 10;
-  background: rgba(36, 36, 44, 0.1);
-  width: 100%;
-  top: 0;
-  left: 0;
-}
-
-#progressBar {
-  background: black;
-  /* background: linear-gradient(to right, #1c1c1c, black); */
-  /* background: linear-gradient(
-    to right,
-    red,
-    orange,
-    yellow,
-    green,
-    blue,
-    indigo,
-    violet
-  ); */
-  transform-origin: top left;
-  transform: scale(0, 0);
-  opacity: 0;
-}
-
-#progressBarContainer,
-#progressBar {
-  height: 12px;
+@media only screen and (max-width: 600px) {
+  .aboutCard,
+  .roadmapCard,
+  .teamCard {
+    margin: 0.5rem 1.5rem 1.5rem 1.5rem;
+  }
+  .mainCard {
+    margin: 2rem 1.5rem;
+  }
+  .leftCard {
+    margin: 2.5rem;
+  }
+  .slideshow {
+    width: 26rem;
+  }
+  .aboutCard {
+    padding: 1rem 1.2rem;
+  }
 }
