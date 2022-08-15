@@ -4,6 +4,7 @@
 - Users are expected to have Metamask installed before minting
 - Website is only compatible for pc and mobile screen size only
 - Website: https://stikman.vercel.app/
+- View collection on Opensea Testnet: https://testnets.opensea.io/collection/stikman-v2
 
 ## Whitelist contract
 
