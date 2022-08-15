@@ -3,7 +3,7 @@ import styles from "../styles/Home.module.css";
 
 const About = () => {
   return (
-    <div className={styles.aboutCard}>
+    <div className={styles.aboutCard} id="about">
       <header className={styles.aboutTitle}>About</header>
 
       <div className={styles.aboutDescription}>
