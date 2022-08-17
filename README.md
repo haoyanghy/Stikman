@@ -2,6 +2,10 @@
 
 - Not using IPFS to store images in this project, images are stored on Github
 - Users are expected to have Metamask installed before minting
+- Gas is used when:
+  1. Minting
+- Public mint comes after 5 minutes of presale mint period
+- Only whitelisted users are able to perform presale mint
 - Website is currently only compatible with pc and mobile screen size only
 - Website: https://stikman.vercel.app/
 - View collection on Opensea Testnet: https://testnets.opensea.io/collection/stikman-v2
